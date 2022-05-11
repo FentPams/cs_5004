@@ -6,8 +6,6 @@ public class Book {
   private Person author;
   private float price;
 
-  private String publisher;
-
   /**
    * Construct a Book object that has the provided title, author and price
    *
