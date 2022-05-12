@@ -22,7 +22,20 @@ public class PersonTest {
     assertEquals("John", this.john.getFirstName());
     assertEquals("Sally", this.sally.getFirstName());
   }
- 
+
+  @Test
+  public void testLast() {
+    assertEquals("Doe", this.john.getLastName());
+    assertEquals("Ride", this.sally.getLastName());
+  }
+
+
+  @Test
+  public void testBirth() {
+    assertEquals(1945, this.john.getYearOfBirth());
+    assertEquals(1951, this.sally.getYearOfBirth());
+  }
+
   @Test
   public void testAge() {
     assertEquals(75, this.john.getAge());
