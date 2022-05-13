@@ -1,6 +1,9 @@
 About this Repo:
+
 	This Repo is made by Xinyi Feng for CS5004/5005
+	
 About folders in the repo:
+
 	LAB01--Module 1 Data Definitions, Classes and Testing in Java
 	...more on the way
 
