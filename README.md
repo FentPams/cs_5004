@@ -11,4 +11,3 @@ This Repo is made by Xinyi Feng for CS5004/5005
 - src folder (A Person Class and A Book Class)
 - test folder (A PersonTest and A BookTest)
 
-
