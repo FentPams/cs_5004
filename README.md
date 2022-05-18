@@ -1,7 +1,8 @@
 ## About this Repo:
 This Repo is made by Xinyi Feng for CS5004/5005
 ## Table of Contents:
-* [LAB01](#lab01)--Module 1 Data Definitions, Classes and Testing in Java
+* [LAB01](#lab01)-- May 11th --Module 1 Data Definitions, Classes and Testing in Java
+* [LAB02](#lab02)-- May 18th --Module 2 Methods for Simple Classes and Exceptions
 * ...more on the way
 ### LAB01: :white_check_mark:
  1. HelloWorld- A HelloWorld Class
