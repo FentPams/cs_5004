@@ -8,7 +8,11 @@ import org.junit.runners.model.TestTimedOutException;
 //import org.junit.jupiter.api.Test;
 
 /**
+<<<<<<< HEAD
  * This class is to test the PetRock Class
+=======
+ * This class is to test the PetRock Class every method is tested
+>>>>>>> ea558ffa4d8f68679c2e80a6041647f26e618862
  */
 public class PetRockTest {
 
