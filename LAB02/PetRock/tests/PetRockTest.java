@@ -8,11 +8,8 @@ import org.junit.runners.model.TestTimedOutException;
 //import org.junit.jupiter.api.Test;
 
 /**
-<<<<<<< HEAD
  * This class is to test the PetRock Class
-=======
- * This class is to test the PetRock Class every method is tested
->>>>>>> ea558ffa4d8f68679c2e80a6041647f26e618862
+ * Two Objects are created: rocky and woofy
  */
 public class PetRockTest {
 
@@ -24,7 +21,8 @@ public class PetRockTest {
 
   /**
    * Sets up two objects
-   *
+   * @param: rocky name is "Rocky" and woofy name is "Woofy"
+   * @param: rocky weight is 5000.56 and woofy weight is 9000.32
    * @throws Exception
    */
   @Before
@@ -36,7 +34,7 @@ public class PetRockTest {
 
   /**
    * checks getName()method
-   *
+   * expected to be equal
    * @throws Exception
    */
   @Test
@@ -47,7 +45,7 @@ public class PetRockTest {
 
   /**
    * checks isHappy()
-   *
+   * expected to be false
    * @throws Exception
    */
   @Test
@@ -58,7 +56,7 @@ public class PetRockTest {
 
   /**
    * checks playWithRock()
-   *
+   * expected to be true
    * @throws Exception
    */
   @Test
@@ -71,7 +69,7 @@ public class PetRockTest {
 
   /**
    * checks getFavNumber()method
-   *
+   * expected to be equal
    * @throws Exception
    */
   @Test
@@ -84,7 +82,7 @@ public class PetRockTest {
 
   /**
    * checks getHappyMessage()
-   *
+   * expected to throw exception
    * @throws Exception
    */
   @Test(expected = IllegalStateException.class)
@@ -95,7 +93,7 @@ public class PetRockTest {
 
   /**
    * checks playWithRock() and getHappyMessage()
-   *
+   * expected to be equal
    * @throws Exception
    */
   @Test
@@ -110,7 +108,7 @@ public class PetRockTest {
 
   /**
    * checks needLooseWeight()
-   *
+   * expected to be equal
    * @throws Exception
    */
   @Test
@@ -121,7 +119,7 @@ public class PetRockTest {
 
   /**
    * checks emptyNameFail()
-   *
+   * expected to throw exception
    * @throws Exception
    */
   @Test(expected = IllegalArgumentException.class)
@@ -131,7 +129,7 @@ public class PetRockTest {
 
   /**
    * checks waitForHappyTimeout
-   *
+   * expected to be equal
    * @throws TestTimedOutException
    */
   @Test
@@ -142,7 +140,7 @@ public class PetRockTest {
 
   /**
    * checks massIsEqual()
-   *
+   * expected to be equal
    * @throws Exception
    */
   @Test
@@ -152,8 +150,8 @@ public class PetRockTest {
   }
 
   /**
-   * checks getWeight by assertNotSame expected to true
-   *
+   * checks getWeight by assertNotSame 
+   * expected to be not same
    * @throws Exception
    */
   @Test
@@ -163,7 +161,7 @@ public class PetRockTest {
 
   /**
    * checks getWeight by assertTrue expected to true
-   *
+   * expected to be true
    * @throws Exception
    */
   @Test
@@ -172,7 +170,8 @@ public class PetRockTest {
   }
 
   /**
-   * checks toString by assertEquals expected to true
+   * checks toString by assertEquals 
+   * expected to true
    */
   @Test
   public void messageTest() {
