@@ -16,7 +16,7 @@ This Repo is made by Xinyi Feng for CS5004/5005
 ### LAB02: :white_check_mark:
  1. PetRock
     - src folder 
-      - [A PetRock Class](https://github.com/FentPams/cs_5004/blob/main/LAB01/PersonProject/src/Person.java) 
+      - [A PetRock Class](https://github.com/FentPams/cs_5004/blob/main/LAB02/PetRock/src/PetRock.java)
     - test folder 
-      - [A PetRockTest](https://github.com/FentPams/cs_5004/blob/main/LAB01/PersonProject/test/PersonTest.java) 
+      - [A PetRockTest](https://github.com/FentPams/cs_5004/blob/main/LAB02/PetRock/tests/PetRockTest.java) 
     - javadocs folder 
