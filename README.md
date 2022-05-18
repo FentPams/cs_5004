@@ -13,4 +13,10 @@ This Repo is made by Xinyi Feng for CS5004/5005
       - [A PersonTest](https://github.com/FentPams/cs_5004/blob/main/LAB01/PersonProject/test/PersonTest.java) 
       - [A BookTest](https://github.com/FentPams/cs_5004/blob/main/LAB01/PersonProject/test/BookTest.java)
     - javadocs folder 
-
+### LAB02: :white_check_mark:
+ 1. PetRock
+    - src folder 
+      - [A PetRock Class](https://github.com/FentPams/cs_5004/blob/main/LAB01/PersonProject/src/Person.java) 
+    - test folder 
+      - [A PetRockTest](https://github.com/FentPams/cs_5004/blob/main/LAB01/PersonProject/test/PersonTest.java) 
+    - javadocs folder 
