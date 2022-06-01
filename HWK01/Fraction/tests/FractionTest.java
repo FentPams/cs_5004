@@ -71,8 +71,8 @@ public class FractionTest {
   }
 
   /**
-   * Tests whether invalid fraction's denominator can throw exception successfully denominator
-   * should cannot be negative
+   * Tests whether invalid fraction's denominator can throw exception successfully
+   * Denominator cannot be negative
    */
   @Test(expected = IllegalArgumentException.class)
   public void testSetNegativeDenominator() {
@@ -96,9 +96,9 @@ public class FractionTest {
   @Test
   public void testGetDenominator() {
 
-    assertEquals(8, fraction1.getDenominator()); // fraction 1 denominator 8
-    assertEquals(5, fraction2.getDenominator()); // fraction 2 denominator 5
-    assertEquals(2, fraction3.getDenominator()); // fraction 3 denominator 2
+    assertEquals(8, fraction1.getDenominator()); // fraction1： denominator 8
+    assertEquals(5, fraction2.getDenominator()); // fraction2： denominator 5
+    assertEquals(2, fraction3.getDenominator()); // fraction3： denominator 2
 
   }
 
@@ -108,13 +108,13 @@ public class FractionTest {
   @Test
   public void testGetNumerator() {
 
-    assertEquals(4, fraction1.getNumerator()); // fraction 1 denominator 4
-    assertEquals(3, fraction2.getNumerator()); // fraction 2 denominator 3
-    assertEquals(0, fraction3.getNumerator()); // fraction 3 denominator 0
+    assertEquals(4, fraction1.getNumerator()); // fraction1: numerator 4
+    assertEquals(3, fraction2.getNumerator()); // fraction2: numerator 3
+    assertEquals(0, fraction3.getNumerator()); // fraction3: numerator 0
   }
 
   /**
-   * Tests whether fraction can be converted to double(decimal form) successfully
+   * Tests whether fraction can be converted to double(decimal number) successfully
    */
   @Test
   public void testToDouble() {
@@ -126,6 +126,7 @@ public class FractionTest {
 
   /**
    * Tests whether fraction can be converted to reciprocal successfully
+   * In the case that numerator and denominator are valid 
    */
   @Test
   public void testReciprocal() {
@@ -135,8 +136,8 @@ public class FractionTest {
   }
 
   /**
-   * Tests whether an invalid denominator fraction can throw exception When numerator is zero
-   * before
+   * Tests whether an invalid denominator fraction can throw exception 
+   * When numerator is zero(or negative) before, it can't be new denominator
    */
   @Test(expected = IllegalArgumentException.class)
   public void testInvalidReciprocal() {
@@ -145,8 +146,8 @@ public class FractionTest {
   }
 
   /**
-   * Tests whether two fraction can be added and yield result successfully In simplification
-   * fraction 1 :4/8 fraction 2: 3/5 fraction 3: 0/2
+   * Tests whether two fraction can be added and yield result successfully in simplification
+   * fraction1 :4/8 fraction2: 3/5 fraction3: 0/2
    */
   @Test
   public void testAdd() {
@@ -158,10 +159,11 @@ public class FractionTest {
 
   /**
    * Tests whether two fraction can be compared successfully
+   * fraction1 :4/8 fraction2: 3/5 fraction3: 0/2
    */
   @Test
   public void testCompareTo() {
-    // fraction 1: 4/8
+    
     assertEquals(0, fraction1.compareTo(new Fraction(1, 2)));
     assertEquals(-1, fraction1.compareTo(new Fraction(5, 8)));
     assertEquals(1, fraction1.compareTo(new Fraction(3, 8)));
