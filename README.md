@@ -7,8 +7,8 @@
 ## Table of Contents:
 * [LAB01](#lab01)-- May 11th --Module 1 Data Definitions, Classes and Testing in Java
 * [LAB02](#lab02)-- May 18th --Module 2 Methods for Simple Classes and Exceptions
-* [LAB04](#lab04)-- May 31th --Module 3 
-* [HWK01](#hwk01)-- May 31th --Module 3 
+* [LAB04](#lab04)-- May 31th --Module 3 Representing More Complex From of Data 
+* [HWK01](#hwk01)-- May 31th --Module 4 Recursive Data Structure 
 * ...more on the way
 ### LAB01: :white_check_mark:
  1. HelloWorld- A HelloWorld Class
