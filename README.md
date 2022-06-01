@@ -27,7 +27,7 @@
     - test folder 
       - [A PetRockTest](https://github.com/FentPams/cs_5004/blob/main/LAB02/PetRock/tests/PetRockTest.java) 
     - javadocs folder 
-### LAB04: :IListOfInts:
+### LAB04: :white_check_mark:
 1.  IListOfInts:
     - src folder 
       - [A ElementNode Class](https://github.com/FentPams/cs_5004/blob/main/LAB04/IListOfInts/src/ElementNode.java)
@@ -36,7 +36,7 @@
     - test folder 
       - [A IListOfIntsTest](https://github.com/FentPams/cs_5004/blob/main/LAB04/IListOfInts/tests/IListOfIntsTest.java)
     - javadocs folder
-### HWK01: :Fraction:
+### HWK01: :white_check_mark:
 1.  Fraction:
     - src folder 
       - [A Fraction Class](https://github.com/FentPams/cs_5004/blob/main/HWK01/Fraction/src/Fraction.java)
