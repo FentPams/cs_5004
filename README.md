@@ -25,3 +25,12 @@
     - test folder 
       - [A PetRockTest](https://github.com/FentPams/cs_5004/blob/main/LAB02/PetRock/tests/PetRockTest.java) 
     - javadocs folder 
+### LAB04: :IListOfInts:
+1.  IListOfInts:
+    - src folder 
+      - [A ElementNode Class](https://github.com/FentPams/cs_5004/blob/main/LAB04/IListOfInts/src/ElementNode.java)
+      - [A EmptyNode Class](https://github.com/FentPams/cs_5004/blob/main/LAB04/IListOfInts/src/EmptyNode.java)
+      - [A IListOfInts Interface](https://github.com/FentPams/cs_5004/blob/main/LAB04/IListOfInts/src/IListOfInts.java)
+    - test folder 
+      - [A IListOfIntsTest](https://github.com/FentPams/cs_5004/blob/main/LAB04/IListOfInts/tests/IListOfIntsTest.java)
+    - javadocs folder
