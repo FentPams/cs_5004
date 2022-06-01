@@ -7,6 +7,8 @@
 ## Table of Contents:
 * [LAB01](#lab01)-- May 11th --Module 1 Data Definitions, Classes and Testing in Java
 * [LAB02](#lab02)-- May 18th --Module 2 Methods for Simple Classes and Exceptions
+* [LAB04](#lab04)-- May 31th --Module 3 
+* [HWK01](#hwk01)-- May 31th --Module 3 
 * ...more on the way
 ### LAB01: :white_check_mark:
  1. HelloWorld- A HelloWorld Class
@@ -33,4 +35,12 @@
       - [A IListOfInts Interface](https://github.com/FentPams/cs_5004/blob/main/LAB04/IListOfInts/src/IListOfInts.java)
     - test folder 
       - [A IListOfIntsTest](https://github.com/FentPams/cs_5004/blob/main/LAB04/IListOfInts/tests/IListOfIntsTest.java)
+    - javadocs folder
+### HWK01: :Fraction:
+1.  Fraction:
+    - src folder 
+      - [A Fraction Class](https://github.com/FentPams/cs_5004/blob/main/HWK01/Fraction/src/Fraction.java)
+      - [A Fraction Interface](https://github.com/FentPams/cs_5004/blob/main/HWK01/Fraction/src/FractionInterface.java)
+    - test folder 
+      - [A Fraction Test](https://github.com/FentPams/cs_5004/blob/main/HWK01/Fraction/tests/FractionTest.java)
     - javadocs folder
