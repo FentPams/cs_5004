@@ -29,12 +29,5 @@ public interface FractionInterface extends Comparable<FractionInterface> {
    */
   FractionInterface add(FractionInterface otherFraction);
 
-
-  /**
-   * Create and return a string that can be used to print this fraction
-   *
-   * @return String
-   */
-  String toString();
 }
 
