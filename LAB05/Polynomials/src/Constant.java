@@ -24,11 +24,11 @@ public class Constant implements Polynomial {
    * @return the coefficient for the term with that power of this polynomial
    */
   @Override
-  public double getCoefficient(int power) {
+  public double getCoefficient(int power)throws IllegalArgumentException{
     if (power == 0) {
       return this.coefficient;
     }
-    return 0;
+    throw new IllegalArgumentException("Invalid power");
   }
 
   /**
@@ -76,7 +76,7 @@ public class Constant implements Polynomial {
    * Determine if it is a root True iff the polynomial evaluates to 0 at that number
    *
    * @param number checks iff the polynomial evaluates to 0 at this number
-   * @return boolean
+   * @return if coefficient is zero, then it is root, otherwise, it is not
    */
   @Override
   public boolean isRoot(double number) {

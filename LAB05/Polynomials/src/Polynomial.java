@@ -20,8 +20,9 @@ public interface Polynomial {
    *
    * @param power the power of term
    * @return the coefficient for the term with that power of this polynomial
+   * @throws IllegalArgumentException if the power doesn't exist in the polynomials
    */
-  double getCoefficient(int power);
+  double getCoefficient(int power)throws IllegalArgumentException;
 
   /**
    * Get string format
