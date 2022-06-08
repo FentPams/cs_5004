@@ -9,6 +9,7 @@
 * [LAB02](#lab02)-- May 18th --Module 2 Methods for Simple Classes and Exceptions
 * [LAB04](#lab04)-- May 31th --Module 3 Representing More Complex From of Data 
 * [HWK01](#hwk01)-- May 31th --Module 4 Recursive Data Structure 
+* [LAB05](#lab05)-- May 31th --Module 4 Recursive Data Structure 
 * ...more on the way
 ### LAB01: :white_check_mark:
  1. HelloWorld- A HelloWorld Class
@@ -44,3 +45,11 @@
     - test folder 
       - [A Fraction Test](https://github.com/FentPams/cs_5004/blob/main/HWK01/Fraction/tests/FractionTest.java)
     - javadocs folder
+### LAB05: :white_check_mark:
+1.  Polynomials:
+    - src folder 
+      - [A Polynomial Interface](https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/src/Polynomial.java)
+      - [A Constant Class](https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/src/Constant.java)
+    - UML graph
+      - https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/Polynomials.png
+     
