@@ -50,6 +50,5 @@
     - src folder 
       - [A Polynomial Interface](https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/src/Polynomial.java)
       - [A Constant Class](https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/src/Constant.java)
-    - UML graph
-      - https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/Polynomials.png
+    - [UML graph](https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/Polynomials.png)
      
