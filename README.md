@@ -10,6 +10,7 @@
 * [LAB04](#lab04)-- May 31th --Module 3 Representing More Complex From of Data 
 * [HWK01](#hwk01)-- May 31th --Module 4 Recursive Data Structure 
 * [LAB05](#lab05)-- June 7th --Module 4 Recursive Data Structure 
+* [HWK02](#hwk02)-- June 20th --Module 4 Recursive Data Structure 
 * ...more on the way
 ### LAB01: :white_check_mark:
  1. HelloWorld- A HelloWorld Class
@@ -50,6 +51,18 @@
     - src folder 
       - [A Polynomial Interface](https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/src/Polynomial.java)
       - [A Constant Class](https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/src/Constant.java)
+    - [UML graph](https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/Polynomials.png)
+    - javadocs folder
+    
+### HWK02: :white_check_mark:
+1.  Polynomials (Improved version of Lab05):
+    - src folder 
+      - [A Polynomial Interface](https://github.com/FentPams/cs_5004/blob/main/HWK02/Polynomials/src/Polynomial.java)
+      - [A Constant Class](https://github.com/FentPams/cs_5004/blob/main/HWK02/Polynomials/src/Constant.java)
+      - [A Line Class](https://github.com/FentPams/cs_5004/blob/main/HWK02/Polynomials/src/Line.java)
+      - [A Quadratic Class](https://github.com/FentPams/cs_5004/blob/main/HWK02/Polynomials/src/Quadratic.java)
+    - test folder 
+      - [A PolynomialTest Class](https://github.com/FentPams/cs_5004/blob/main/HWK02/Polynomials/tests/PolynomialTest.java)
     - [UML graph](https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/Polynomials.png)
     - javadocs folder
      
