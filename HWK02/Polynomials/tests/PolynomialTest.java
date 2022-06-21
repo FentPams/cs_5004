@@ -1,8 +1,8 @@
 /**
- * Programmer: Xinyi Feng
- * HWK02--Polynomials Date: June 20 th, 2022
- * PolynomialTest, test all the methods of Polynomial interface
+ * Programmer: Xinyi Feng HWK02--Polynomials Date: June 20 th, 2022 PolynomialTest, test all the
+ * methods of Polynomial interface
  */
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -13,6 +13,12 @@ import org.junit.Test;
 
 public class PolynomialTest {
 
+  /**
+   * test get degree method
+   * return 2 for quadratic object
+   * return 1 for line object
+   * return 0 for constant
+   */
   @Test
   public void testGetDegree() {
     //Setup three objects constructed by default
@@ -25,6 +31,11 @@ public class PolynomialTest {
     assertEquals(0, c1.getDegree());
   }
 
+  /**
+   * test default objects' get coefficient method
+   * return corresponding coefficient of the term with the power passed in
+   * more tests of objects constructed by arguments will be tested in other methods
+   */
   @Test
   public void testGetCoefficient() {
     //Setup three objects constructed by default
@@ -37,6 +48,11 @@ public class PolynomialTest {
     assertEquals(0, c1.getCoefficient(0), 0.01);
   }
 
+  /**
+   * test get coefficient method with throw exception
+   * illegal arguments(power beyond scope) passed in
+   * the method returns double
+   */
   @Test(expected = IllegalArgumentException.class)
   public void testGetCoefficient2() {
     //Setup three objects constructed by argument
@@ -48,6 +64,11 @@ public class PolynomialTest {
     assertEquals(-2.5, l2.getCoefficient(2), 0.01);
     assertEquals(6.6, c2.getCoefficient(1), 0.01);
   }
+
+  /**
+   * test get string method with different objects of different class
+   * use to string method to test equal
+   */
 
   @Test
   public void testGetString() {
@@ -71,6 +92,11 @@ public class PolynomialTest {
     assertEquals("p(x) = 6.6", c2.toString());
   }
 
+  /**
+   * test get leading coefficient method
+   * the method returns double
+   */
+
   @Test
   public void testGetLeadingCoefficient() {
     //Setup three objects constructed by default
@@ -93,6 +119,10 @@ public class PolynomialTest {
     assertEquals(6.6, c2.getLeadingCoefficient(), 0.01);
   }
 
+  /**
+   * test evaluate at method
+   * the method returns double
+   */
   @Test
   public void testEvaluateAt() {
     //Setup three objects constructed by default
@@ -119,6 +149,10 @@ public class PolynomialTest {
 
   }
 
+  /**
+   * test get y intercept method
+   * the method returns double
+   */
   @Test
   public void testGetYIntercept() {
     //Setup three objects constructed by default
@@ -140,6 +174,10 @@ public class PolynomialTest {
     assertEquals(6.6, c2.getYIntercept(), 0.01);
   }
 
+  /**
+   * tests is root method
+   * the method returns boolean
+   */
   @Test
   public void testIsRoot() {
     //Setup three objects constructed by default
@@ -160,9 +198,14 @@ public class PolynomialTest {
     assertFalse(l2.isRoot(0));
     assertFalse(c2.isRoot(0));
 
-
   }
 
+  /**
+   * test is equal to method
+   * the method returns boolean
+   * the object considered to be equal, when they are from same class
+   * and the coefficient is same, the degree is same.
+   */
   @Test
   public void testIsEqualTo() {
     //Setup three objects constructed by argument
@@ -195,9 +238,14 @@ public class PolynomialTest {
     assertFalse(l2.isEqualTo(c2));
     assertFalse(c2.isEqualTo(q4));
 
-
   }
 
+  /**
+   * test plus method
+   * returns polynomial class
+   * test both addition of same class gives the same class object
+   * and addition of same class gives another class object
+   */
   @Test
   public void testPlus() {
     //Setup three objects constructed by argument
@@ -205,7 +253,7 @@ public class PolynomialTest {
     Line l2 = new Line(-2.5, -1); // test negative coefficient
     Constant c2 = new Constant(6.6); // double number
 
-    // three objects above plus following will give new constant 0
+    // three objects above plus following will give new constant c6
     Quadratic q6 = new Quadratic(-3, -2, -1);
     Line l6 = new Line(2.5, 1); // test negative coefficient
     Constant c6 = new Constant(); // constant 0
@@ -230,11 +278,16 @@ public class PolynomialTest {
     assertEquals(c6.toString(), q2.plus(q6).toString());
     assertEquals(c6.toString(), l2.plus(l6).toString());
 
+    // when quadratic plus its inverse coefficient of power 2, it will give a new line l7
     assertEquals(l7.toString(), q2.plus(q7).toString());
 
   }
 
-  // use toString method to test equal
+  /** use toString method to test equal method
+   * the coefficient 0 or 1 won't be showed
+   * the term with coefficient 0 won't be showed unless it is the only term
+   * the symbols " + " or " 1" can be displayed correctly
+   */
   @Test
   public void testTranslate() {
     //Setup three objects constructed by default
@@ -259,6 +312,12 @@ public class PolynomialTest {
 
   }
 
+  /**
+   * use to string to test legal multiply method
+   * the method returns polynomial
+   * quadratic can legally multiply constant
+   * line can legally multiply constant
+   */
   @Test
   public void testMultiply1() {
     //Setup three objects constructed by default
@@ -289,6 +348,11 @@ public class PolynomialTest {
 
   }
 
+  /**
+   * test illegal multiply method
+   * quadratic multiply a non-constant object throws exception
+   * line multiply a non-constant object throws exception
+   */
   @Test(expected = IllegalArgumentException.class)
   public void testMultiply2() {
 
@@ -303,6 +367,12 @@ public class PolynomialTest {
     l2.multiply(q2); // line can't multiply a line
   }
 
+  /**
+   * test to string method
+   * only keeps one digit after point
+   * display symbols correctly
+   * display positive and negative term properly
+   */
   @Test
 
   public void testToString() {
