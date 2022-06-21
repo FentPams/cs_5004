@@ -63,6 +63,6 @@
       - [A Quadratic Class](https://github.com/FentPams/cs_5004/blob/main/HWK02/Polynomials/src/Quadratic.java)
     - test folder 
       - [A PolynomialTest Class](https://github.com/FentPams/cs_5004/blob/main/HWK02/Polynomials/tests/PolynomialTest.java)
-    - [UML graph](https://github.com/FentPams/cs_5004/blob/main/LAB05/Polynomials/Polynomials.png)
+    - [UML graph](https://github.com/FentPams/cs_5004/blob/main/HWK02/Polynomials/Polynomials%20(1).png)
     - javadocs folder
      
