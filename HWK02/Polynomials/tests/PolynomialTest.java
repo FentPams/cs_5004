@@ -55,13 +55,22 @@ public class PolynomialTest {
    */
   @Test(expected = IllegalArgumentException.class)
   public void testGetCoefficient2() {
-    //Setup three objects constructed by argument
+    //Setup quadratic object constructed by argument
     Quadratic q2 = new Quadratic(2.5, 1, 3.5);
-    Line l2 = new Line(-2.5, 0);
-    Constant c2 = new Constant(6.6);
-
     assertEquals(2.5, q2.getCoefficient(3), 0.01);
+  }
+
+  @Test(expected = IllegalArgumentException.class)
+  public void testGetCoefficient3() {
+    //Setup line object constructed by argument
+    Line l2 = new Line(-2.5, 0);
     assertEquals(-2.5, l2.getCoefficient(2), 0.01);
+  }
+  
+  @Test(expected = IllegalArgumentException.class)
+  public void testGetCoefficient4() {
+    //Setup constant object constructed by argument
+    Constant c2 = new Constant(6.6);
     assertEquals(6.6, c2.getCoefficient(1), 0.01);
   }
 
