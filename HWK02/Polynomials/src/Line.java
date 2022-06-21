@@ -187,7 +187,9 @@ public class Line implements Polynomial {
   public Polynomial multiply(Polynomial other) throws IllegalArgumentException {
     return switch (other.getDegree()) {
       //multiply constant
-      case 0 -> new Line(this.coefficientDegree1 * other.getCoefficient(0),
+      // has two cases: when constant is 0 or is not
+      case 0 -> (other.getCoefficient(0) == 0) ? new Constant() : new Line(
+          this.coefficientDegree1 * other.getCoefficient(0),
           this.coefficientDegree0 * other.getCoefficient(0));
       //multiply line  (a1x+b1)(a2x+b2) = a1a2x^2+(a1b2+a2b1)x+b1b2
       case 1 -> new Quadratic(this.coefficientDegree1 * other.getCoefficient(1),

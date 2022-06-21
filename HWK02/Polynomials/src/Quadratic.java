@@ -1,7 +1,6 @@
 /**
  * Programmer: Xinyi Feng
- * HWK02--Polynomials Date: June 20 th, 2022
- * This Quadratic class implement
+ * HWK02--Polynomials Date: June 20 th, 2022 This Quadratic class implement
  * Polynomial interface, for degree 2 f(x) = ax^2 + bx + c
  */
 public class Quadratic implements Polynomial {
@@ -205,14 +204,20 @@ public class Quadratic implements Polynomial {
    */
   @Override
   public Polynomial multiply(Polynomial other) throws IllegalArgumentException {
-    return switch (other.getDegree()) {
-      //multiply constant
-      case 0 -> new Quadratic(this.coefficientDegree2 * other.getCoefficient(0),
+    // when constant is 0, the result will be 0
+    if (other.getDegree() == 0 && other.getCoefficient(0) == 0) {
+      return new Constant();
+    }
+    //multiply constant is not 0
+    if (other.getDegree() == 0) {
+      return new Quadratic(this.coefficientDegree2 * other.getCoefficient(0),
           this.coefficientDegree1 * other.getCoefficient(0),
           this.coefficientDegree0 * other.getCoefficient(0));
-      // neither constant nor line
-      default -> throw new IllegalArgumentException("Violated the assumption");
-    };
+    }
+    // multiply polynomial not a constant
+    else {
+      throw new IllegalArgumentException("Violated the assumption, can only multiply a constant");
+    }
   }
 
   /**
