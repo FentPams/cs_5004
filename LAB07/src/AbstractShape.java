@@ -16,12 +16,12 @@ public abstract class AbstractShape implements Shape {
 
   @Override
   public int compareTo(Shape s) {
-    double areaThis = this.area();
-    double areaOther = s.area();
+    double perimeterThis = this.perimeter();
+    double perimeterOther = s.perimeter();
 
-    if (areaThis < areaOther) {
+    if (perimeterThis < perimeterOther) {
       return -1;
-    } else if (areaOther < areaThis) {
+    } else if (perimeterOther < perimeterThis) {
       return 1;
     } else {
       return 0;

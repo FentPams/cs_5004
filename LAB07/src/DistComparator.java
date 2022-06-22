@@ -32,6 +32,15 @@ public class DistComparator implements Comparator<Shape> {
    */
   @Override
   public int compare(Shape o1, Shape o2) {
-    return 0;
+    double disToOriginThis = o1.distanceFromOrigin();
+    double disToOriginOther = o2.distanceFromOrigin();
+
+    if (disToOriginThis < disToOriginOther) {
+      return -1;
+    } else if (disToOriginOther < disToOriginThis) {
+      return 1;
+    } else {
+      return 0;
+    }
   }
 }

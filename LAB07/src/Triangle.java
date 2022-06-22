@@ -1,3 +1,8 @@
+/**
+ * Programmer: Xinyi Feng
+ * LAB 07 -- Triangle
+ * Date : 22, June, 2022
+ */
 import static java.lang.Math.sqrt;
 
 public class Triangle extends AbstractShape {
@@ -26,7 +31,8 @@ public class Triangle extends AbstractShape {
   }
 
   /**
-   *  second constructor call the first constructor
+   * second constructor call the first constructor
+   *
    * @param x1,x2,y1,y2,x3,y3, 6 double, each two will construct a point
    */
   public Triangle(double x1, double y1, double x2, double y2, double x3, double y3)
@@ -36,9 +42,10 @@ public class Triangle extends AbstractShape {
 
 
   /**
-   * Computes and returns the area of this shape.
-   * Area of triangle =  (Ax(By -Cy) + Bx(Cy -Ay) + Cx(Ay - By))/2
-   * Read more: https://www.java67.com/2016/10/how-to-calculate-area-of-triangle-in.html#ixzz7Wv6Dy1Gl
+   * Computes and returns the area of this shape. Area of triangle =  (Ax(By -Cy) + Bx(Cy -Ay) +
+   * Cx(Ay - By))/2 Read more:
+   * https://www.java67.com/2016/10/how-to-calculate-area-of-triangle-in.html#ixzz7Wv6Dy1Gl
+   *
    * @return the area of the shape
    */
   @Override
@@ -49,8 +56,9 @@ public class Triangle extends AbstractShape {
   }
 
   /**
-   * Computes and returns the perimeter of this shape.
-   * invoke private helper method by adding three sides
+   * Computes and returns the perimeter of this shape. invoke private helper method by adding three
+   * sides
+   *
    * @return the perimeter of the shape
    */
   @Override
@@ -74,13 +82,14 @@ public class Triangle extends AbstractShape {
     double y2 = this.point2.getY();
     double x3 = this.point3.getX();
     double y3 = this.point3.getY();
-    Point2D newPoint2 = new Point2D(x1 + lambda * (x2 - x1), y1 + lambda*(y2 - y1));
-    Point2D newPoint3 = new Point2D(x1 + lambda * (x3 - x1), y1 + lambda*(y3 - y1));
+    Point2D newPoint2 = new Point2D(x1 + lambda * (x2 - x1), y1 + lambda * (y2 - y1));
+    Point2D newPoint3 = new Point2D(x1 + lambda * (x3 - x1), y1 + lambda * (y3 - y1));
     return new Triangle(this.reference, newPoint2, newPoint3);
   }
 
   /**
-   *  check if two points are unique
+   * check if two points are unique
+   *
    * @param a point2d
    * @param b point2d
    * @return true if two points are not unique
@@ -90,7 +99,8 @@ public class Triangle extends AbstractShape {
   }
 
   /**
-   *  checks if three points are unique based on check points method
+   * checks if three points are unique based on check points method
+   *
    * @param a point2d
    * @param b point2d
    * @param c point2d
@@ -101,18 +111,21 @@ public class Triangle extends AbstractShape {
   }
 
   /**
-   *  calculates the side of triangle
+   * calculates the side of triangle
+   *
    * @param x point2d
    * @param y point2d
    * @return double, the side of triangle
    */
   private double calculateDistance(Point2D x, Point2D y) {
     return sqrt(
-        (x.getY() - y.getY()) * (x.getY() - y.getY()) + (x.getX() - y.getX()) * (x.getX() - y.getX()));
+        (x.getY() - y.getY()) * (x.getY() - y.getY()) + (x.getX() - y.getX()) * (x.getX()
+            - y.getX()));
   }
 
   /**
    * to string method to display three points of the triangle
+   *
    * @return string
    */
   public String toString() {

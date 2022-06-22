@@ -1,3 +1,12 @@
+/**
+ * Programmer: Xinyi Feng
+ * LAB 07 -- Triangle
+ * Date : 22, June, 2022
+ */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,11 +31,11 @@ public class ShapeTest {
 
     point1 = new Point2D(0, 0);
     point2 = new Point2D(3, 0);
-    point3 = new Point2D(0,4);
+    point3 = new Point2D(0, 4);
     tri1 = new Triangle(2, 3, 4, 5, 6, 7);
     tri2 = new Triangle(point1, point2, point3);
     tri3 = new Triangle(1, 2, 2, 1, 3, 3);
-    
+
   }
 
   /**
@@ -59,6 +68,20 @@ public class ShapeTest {
   }
 
   /**
+   * Tests the triangle created with unique points throw exception
+   */
+  @Test(expected = IllegalArgumentException.class)
+  public void testTriangleFailed() {
+    Triangle failedTri;
+    Point2D sameOne = new Point2D(1, 1);
+    Point2D sameTwo = new Point2D(1, 1);
+    Point2D sameThree = new Point2D(1, 1);
+
+    failedTri = new Triangle(sameOne, sameTwo, sameThree);
+  }
+
+
+  /**
    * Tests whether the area methods work correctly for all shapes
    */
   @Test
@@ -69,7 +92,7 @@ public class ShapeTest {
     assertEquals(5, rect1.area(), 0.001);
     assertEquals(100, rect2.area(), 0.001);
     assertEquals(0.0, tri1.area(), 0.001);//colinear triangle
-    assertEquals(6.0,tri2.area(), 0.001);
+    assertEquals(6.0, tri2.area(), 0.001);
     assertEquals(1.5, tri3.area(), 0.001);
   }
 
@@ -84,7 +107,7 @@ public class ShapeTest {
     assertEquals(9, rect1.perimeter(), 0.001);
     assertEquals(40, rect2.perimeter(), 0.001);
     assertEquals(11.313, tri1.perimeter(), 0.001);
-    assertEquals(12.0,tri2.perimeter(), 0.001);
+    assertEquals(12.0, tri2.perimeter(), 0.001);
     assertEquals(5.886, tri3.perimeter(), 0.001);
 
   }
@@ -114,4 +137,59 @@ public class ShapeTest {
 
   }
 
+  /**
+   * test compare to method in Abstract class compare perimeter return negative if is less than
+   * return 0 if equal return positive if is larger
+   */
+  @Test
+  public void testCompareTo() {
+    Triangle tri4SameTri2 = new Triangle(0, 0, 3, 0, 0, 4); // same as tri2
+    // test compare triangle
+    assertEquals(-1, tri1.compareTo(tri2));
+    assertEquals(0, tri2.compareTo(tri4SameTri2));
+    assertEquals(1, tri2.compareTo(tri3));
+
+    // test rectangle compare
+    assertEquals(-1, rect1.compareTo(rect2));
+
+    // test circle compare
+    assertEquals(-1, circle1.compareTo(circle2));
+    assertEquals(-1, circle2.compareTo(circle3));
+    assertEquals(-1, circle1.compareTo(circle3));
+
+    // test compare different objects
+    assertEquals(-1, tri1.compareTo(circle1));
+    assertEquals(1, tri1.compareTo(rect1));
+    assertEquals(-1, rect1.compareTo(circle1));
+  }
+
+  /**
+   * test compare method in DisComparator class compare distance to origin return negative if is
+   * less than return 0 if equal return positive if is larger
+   * <p>
+   * Compare the ordering of the array sorted by comparator and the array sorted manually The two
+   * lists should be in same order(according to the distance to origin)
+   */
+  @Test
+  public void testCompareInDisComparator() {
+    // add objects unsorted in the list
+    List<Shape> shapeLisSortByComparator = new ArrayList<>();
+    shapeLisSortByComparator.add(circle1);
+    shapeLisSortByComparator.add(circle2);
+    shapeLisSortByComparator.add(circle3);
+    shapeLisSortByComparator.add(rect1);
+    shapeLisSortByComparator.add(rect2);
+    shapeLisSortByComparator.add(tri1);
+    shapeLisSortByComparator.add(tri2);
+    shapeLisSortByComparator.add(tri3);
+    // sort arraylist by comparator
+    Collections.sort(shapeLisSortByComparator, new DistComparator());
+
+    // sort array manually
+    List<Shape> shapeLisSorted = new ArrayList<>(
+        List.of(circle3, tri2, tri3, rect2, tri1, circle1, rect1, circle2));
+
+    // compare two arrays
+    assertArrayEquals(shapeLisSorted.toArray(), shapeLisSortByComparator.toArray());
+  }
 }
