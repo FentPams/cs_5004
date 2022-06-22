@@ -17,7 +17,6 @@ public class Triangle extends AbstractShape {
    * @param p1 The first point as reference
    * @param p2 The second point
    * @param p3 The third point
-   * @throw IllegalArgumentException
    */
   public Triangle(Point2D p1, Point2D p2, Point2D p3) throws IllegalArgumentException {
     super(p1);

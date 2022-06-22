@@ -25,7 +25,7 @@ public class DistComparator implements Comparator<Shape> {
    *                              arguments
    * @throws ClassCastException   if the arguments' types prevent them from being compared by this
    *                              comparator.
-   * @apiNote It is generally the case, but <i>not</i> strictly required that
+   * //@apiNote It is generally the case, but <i>not</i> strictly required that
    * {@code (compare(x, y)==0) == (x.equals(y))}.  Generally speaking, any comparator that violates
    * this condition should clearly indicate this fact.  The recommended language is "Note: this
    * comparator imposes orderings that are inconsistent with equals."
