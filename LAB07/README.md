@@ -6,7 +6,7 @@
 ```java
 Programmer name = new Programmer("Xinyi Feng");
     
-HWK02 title = new HWK("Polynomials");
+LAB lab07 = new LAB("Generics and Ordering");
 
 Date day = new Date("June 22th 2022");
 
