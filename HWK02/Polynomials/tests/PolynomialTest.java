@@ -1,5 +1,7 @@
 /**
- * Programmer: Xinyi Feng HWK02--Polynomials Date: June 20 th, 2022 PolynomialTest, test all the
+ * Programmer: Xinyi Feng
+ * HWK02--Polynomials Date: June 20 th, 2022
+ * PolynomialTest, test all the
  * methods of Polynomial interface
  */
 
@@ -7,17 +9,14 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Before;
 import org.junit.Test;
 
 
 public class PolynomialTest {
 
   /**
-   * test get degree method
-   * return 2 for quadratic object
-   * return 1 for line object
-   * return 0 for constant
+   * test get degree method return 2 for quadratic object return 1 for line object return 0 for
+   * constant
    */
   @Test
   public void testGetDegree() {
@@ -32,9 +31,9 @@ public class PolynomialTest {
   }
 
   /**
-   * test default objects' get coefficient method
-   * return corresponding coefficient of the term with the power passed in
-   * more tests of objects constructed by arguments will be tested in other methods
+   * test default objects' get coefficient method return corresponding coefficient of the term with
+   * the power passed in more tests of objects constructed by arguments will be tested in other
+   * methods
    */
   @Test
   public void testGetCoefficient() {
@@ -49,34 +48,33 @@ public class PolynomialTest {
   }
 
   /**
-   * test get coefficient method with throw exception
-   * illegal arguments(power beyond scope) passed in
-   * the method returns double
+   * test get coefficient method with throw exception illegal arguments(power beyond scope) passed
+   * in the method returns double
    */
   @Test(expected = IllegalArgumentException.class)
   public void testGetCoefficient2() {
     //Setup quadratic object constructed by argument
     Quadratic q2 = new Quadratic(2.5, 1, 3.5);
-    assertEquals(2.5, q2.getCoefficient(3), 0.01);
+    q2.getCoefficient(3);
   }
 
   @Test(expected = IllegalArgumentException.class)
   public void testGetCoefficient3() {
     //Setup line object constructed by argument
     Line l2 = new Line(-2.5, 0);
-    assertEquals(-2.5, l2.getCoefficient(2), 0.01);
+    l2.getCoefficient(2);
   }
-  
+
   @Test(expected = IllegalArgumentException.class)
   public void testGetCoefficient4() {
     //Setup constant object constructed by argument
     Constant c2 = new Constant(6.6);
-    assertEquals(6.6, c2.getCoefficient(1), 0.01);
+    c2.getCoefficient(1);
   }
 
   /**
-   * test get string method with different objects of different class
-   * use to string method to test equal
+   * test get string method with different objects of different class use to string method to test
+   * equal
    */
 
   @Test
@@ -102,8 +100,7 @@ public class PolynomialTest {
   }
 
   /**
-   * test get leading coefficient method
-   * the method returns double
+   * test get leading coefficient method the method returns double
    */
 
   @Test
@@ -129,8 +126,7 @@ public class PolynomialTest {
   }
 
   /**
-   * test evaluate at method
-   * the method returns double
+   * test evaluate at method the method returns double
    */
   @Test
   public void testEvaluateAt() {
@@ -159,8 +155,7 @@ public class PolynomialTest {
   }
 
   /**
-   * test get y intercept method
-   * the method returns double
+   * test get y intercept method the method returns double
    */
   @Test
   public void testGetYIntercept() {
@@ -184,8 +179,7 @@ public class PolynomialTest {
   }
 
   /**
-   * tests is root method
-   * the method returns boolean
+   * tests is root method the method returns boolean
    */
   @Test
   public void testIsRoot() {
@@ -210,10 +204,8 @@ public class PolynomialTest {
   }
 
   /**
-   * test is equal to method
-   * the method returns boolean
-   * the object considered to be equal, when they are from same class
-   * and the coefficient is same, the degree is same.
+   * test is equal to method the method returns boolean the object considered to be equal, when they
+   * are from same class and the coefficient is same, the degree is same.
    */
   @Test
   public void testIsEqualTo() {
@@ -250,10 +242,8 @@ public class PolynomialTest {
   }
 
   /**
-   * test plus method
-   * returns polynomial class
-   * test both addition of same class gives the same class object
-   * and addition of same class gives another class object
+   * test plus method returns polynomial class test both addition of same class gives the same class
+   * object and addition of same class gives another class object
    */
   @Test
   public void testPlus() {
@@ -292,10 +282,47 @@ public class PolynomialTest {
 
   }
 
-  /** use toString method to test equal method
-   * the coefficient 0 or 1 won't be showed
-   * the term with coefficient 0 won't be showed unless it is the only term
-   * the symbols " + " or " 1" can be displayed correctly
+  /**
+   * test plus method that throw exception in constant class with a fake class created a polynomial
+   * with degree of 4
+   */
+  @Test(expected = IllegalArgumentException.class)
+  public void testConstantPlusThrowException() {
+    FakePolynomialDegree4 fake = new FakePolynomialDegree4();
+    Constant c = new Constant();
+
+    c.plus(fake);
+
+  }
+
+  /**
+   * test plus method that throw exception in line class with a fake class created a polynomial with
+   * degree of 4
+   */
+  @Test(expected = IllegalArgumentException.class)
+  public void testLinePlusThrowException() {
+    FakePolynomialDegree4 fake = new FakePolynomialDegree4();
+    Line l = new Line();
+
+    l.plus(fake);
+  }
+
+  /**
+   * test plus method that throw exception in quadratic class with a fake class created a polynomial
+   * with degree of 4
+   */
+  @Test(expected = IllegalArgumentException.class)
+  public void testQuadraticPlusThrowException() {
+    FakePolynomialDegree4 fake = new FakePolynomialDegree4();
+    Quadratic q = new Quadratic();
+    q.plus(fake);
+  }
+
+
+  /**
+   * use toString method to test equal method the coefficient 0 or 1 won't be showed the term with
+   * coefficient 0 won't be showed unless it is the only term the symbols " + " or " 1" can be
+   * displayed correctly
    */
   @Test
   public void testTranslate() {
@@ -322,10 +349,8 @@ public class PolynomialTest {
   }
 
   /**
-   * use to string to test legal multiply method
-   * the method returns polynomial
-   * quadratic can legally multiply constant
-   * line can legally multiply constant
+   * use to string to test legal multiply method the method returns polynomial quadratic can legally
+   * multiply constant line can legally multiply constant
    */
   @Test
   public void testMultiply1() {
@@ -358,12 +383,11 @@ public class PolynomialTest {
   }
 
   /**
-   * test illegal multiply method
-   * quadratic multiply a non-constant object throws exception
-   * line multiply a non-constant object throws exception
+   * test illegal multiply method quadratic multiply a non-constant object throws exception line
+   * multiply a non-constant object throws exception
    */
   @Test(expected = IllegalArgumentException.class)
-  public void testMultiply2() {
+  public void testMultiplyThrowException() {
 
     //Setup three objects constructed by argument
     Quadratic q2 = new Quadratic(3, 2, 1);
@@ -377,10 +401,45 @@ public class PolynomialTest {
   }
 
   /**
-   * test to string method
-   * only keeps one digit after point
-   * display symbols correctly
-   * display positive and negative term properly
+   * test multiply method that throw exception in constant class with a fake class created a
+   * polynomial with degree of 4
+   */
+  @Test(expected = IllegalArgumentException.class)
+  public void testConstantMultiplyThrowException() {
+    FakePolynomialDegree4 fake = new FakePolynomialDegree4();
+    Constant c = new Constant();
+    c.multiply(fake);
+
+  }
+
+  /**
+   * test multiply method that throw exception in line class with a fake class created a polynomial
+   * with degree of 4
+   */
+  @Test(expected = IllegalArgumentException.class)
+  public void testLineMultiplyThrowException() {
+    FakePolynomialDegree4 fake = new FakePolynomialDegree4();
+    Line l = new Line();
+    l.multiply(fake);
+
+  }
+
+  /**
+   * test multiply method that throw exception in quadratic class with a fake class created a
+   * polynomial with degree of 4
+   */
+  @Test(expected = IllegalArgumentException.class)
+  public void testQuadraticMultiplyThrowException() {
+    FakePolynomialDegree4 fake = new FakePolynomialDegree4();
+    Quadratic q = new Quadratic();
+
+    q.multiply(fake);
+
+  }
+
+  /**
+   * test to string method only keeps one digit after point display symbols correctly display
+   * positive and negative term properly
    */
   @Test
 
@@ -396,3 +455,16 @@ public class PolynomialTest {
 
   }
 }
+
+/**
+ * A fake class to initialize Polynomial with degree 4 only used for test IllegalArgumentException
+ * in plus and multiply methods.
+ */
+class FakePolynomialDegree4 extends Constant {
+
+  @Override
+  public int getDegree() {
+    return 4;
+  }
+}
+

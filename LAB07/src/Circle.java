@@ -3,8 +3,7 @@
  * Shape interface.
  */
 public class Circle extends AbstractShape {
-  public double radius;
-  public int myint = 2;
+  private double radius;
 
   /**
    * Construct a circle object using the given center and radius
@@ -13,7 +12,7 @@ public class Circle extends AbstractShape {
    * @param radius the radius of this circle
    */
   public Circle(double x, double y, double radius) {
-    super(new Point2D(x, y));
+    super(new Point2D(x,y));
     this.radius = radius;
   }
 
@@ -42,9 +41,7 @@ public class Circle extends AbstractShape {
             radius);
   }
 
-  public int myFunction(){
-    return 1;
-  }
+  @Override
   public String toString() {
     return String.format("Circle: center (%.3f,%.3f) radius %.3f",
             this.reference.getX(),this.reference.getY(),this.radius);
