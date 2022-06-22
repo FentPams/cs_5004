@@ -6,7 +6,7 @@
 ```java
 Programmer name = new Programmer("Xinyi Feng");
     
-LAB lab05 = new Lab("Polynomials");
+Lab lab05 = new Lab("Polynomials");
 
 Date day = new Date("June 7th 2022");
 
