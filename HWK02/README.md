@@ -6,7 +6,7 @@
 ```java
 Programmer name = new Programmer("Xinyi Feng");
     
-HWK02 title = new HWK("Polynomials");
+Hwk hwk02 = new Hwk("Polynomials");
 
 Date day = new Date("June 20th 2022");
 
