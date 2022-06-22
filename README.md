@@ -11,6 +11,7 @@
 * [HWK01](#hwk01)-- May 31th --Module 4 Recursive Data Structure 
 * [LAB05](#lab05)-- June 7th --Module 4 Recursive Data Structure 
 * [HWK02](#hwk02)-- June 20th --Module 4 Recursive Data Structure 
+* [LAB07](#lab07)-- June 22th --Module 5 Equality and Comparison 
 * ...more on the way
 ### LAB01: :white_check_mark:
  1. HelloWorld- A HelloWorld Class
@@ -65,4 +66,13 @@
       - [A PolynomialTest Class](https://github.com/FentPams/cs_5004/blob/main/HWK02/Polynomials/tests/PolynomialTest.java)
     - [UML graph](https://github.com/FentPams/cs_5004/blob/main/HWK02/Polynomials/Polynomials%20(1).png)
     - javadocs folder
-     
+### LAB07: :white_check_mark:
+1.  Geneircs and Ordering:
+    - src folder 
+      - [Shape Interface](https://github.com/FentPams/cs_5004/blob/main/LAB07/src/Shape.java)
+      - [Abstract Shape Class](https://github.com/FentPams/cs_5004/blob/main/LAB07/src/AbstractShape.java)
+      - [Triangle Class](https://github.com/FentPams/cs_5004/blob/main/LAB07/src/Triangle.java)
+      - [DisComparator Class](https://github.com/FentPams/cs_5004/blob/main/LAB07/src/DistComparator.java)
+    - test folder
+      - [ShapeTest Class](https://github.com/FentPams/cs_5004/blob/main/LAB07/tests/ShapeTest.java)
+    - javadocs folder    
