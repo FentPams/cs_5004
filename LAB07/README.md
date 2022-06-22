@@ -4,12 +4,10 @@
 ![Mac OS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0)
  
  * This Repo is made by Xinyi Feng for CS5004/5005
- * This Folder is for LAB 07( Generics and Ordering )
+ * This Folder is for LAB 07( Generics and Ordering ) -- June 22th
  
- ## Table of Contents:
- * [LAB07](#lab07)-- June 22th --Module 5 Equality and Comparison 
  
- ## LAB07: Geneircs and Ordering::white_check_mark:
+ ### LAB07: Geneircs and Ordering: 💯
  
    #### src folder
    - Revised 
