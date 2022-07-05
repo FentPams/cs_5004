@@ -28,6 +28,36 @@ public interface FractionInterface extends Comparable<FractionInterface> {
    * @return fraction, a result after adding
    */
   FractionInterface add(FractionInterface otherFraction);
-
+  
+  /**
+   * Setter to set numerator
+   * set this. numerator as the argument
+   */
+  public void setNumerator(int numerator); 
+    
+   /**
+   * Setter to set denominator
+   * set this. denominator as the argument
+   * will throw exception when the denominator is set less than 0
+   *
+   * @param denominator int to be set
+   * @throws IllegalArgumentException if denominator is not positive
+   */
+  public void setDenominator(int denominator) throws IllegalArgumentException;
+  
+  /**
+   * Getter to get denominator
+   *
+   * @return double, the denominator
+   */
+  public int getDenominator()；
+  
+  /**
+   * Getter to get numerator
+   *
+   * @return double, the numerator
+   */
+  public int getNumerator();
+ 
 }
 
