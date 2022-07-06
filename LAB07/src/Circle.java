@@ -36,7 +36,8 @@ public class Circle extends AbstractShape {
   }
 
   @Override
-  public Shape resize(double factor) {
+  public Shape resize(double factor) throws IllegalArgumentException {
+    if(factor < 0) throw new IllegalArgumentException("Illegal factor");
     return new Circle(reference.getX(), reference.getY(), Math.sqrt(factor) *
             radius);
   }

@@ -31,7 +31,8 @@ public class Rectangle extends AbstractShape {
   }
 
   @Override
-  public Shape resize(double factor) {
+  public Shape resize(double factor) throws IllegalArgumentException {
+    if(factor < 0) throw new IllegalArgumentException("Illegal factor");
     double sqrtFactor = Math.sqrt(factor);
     return new Rectangle(
             this.reference.getX(),
