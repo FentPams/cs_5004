@@ -38,6 +38,7 @@ public class ShapeTest {
 
   }
 
+
   /**
    * Tests whether objects have been created with the correct numbers or not. It does this by using
    * their toString methods
@@ -112,6 +113,10 @@ public class ShapeTest {
 
   }
 
+  /**
+   * Tests whether the resize methods work correctly for all shapes
+   */
+
   @Test
   public void testResizes() {
     Shape resizedCircle1, resizedCircle2, resizedCircle3, resizedRect1,
@@ -134,6 +139,23 @@ public class ShapeTest {
     assertEquals(0.5 * tri1.area(), resizedTri1.area(), 0.001);
     assertEquals(2 * tri2.area(), resizedTri2.area(), 0.001);
     assertEquals(5 * tri3.area(), resizedTri3.area(), 0.001);
+
+  }
+
+  /**
+   * Tests the resize method will throw illegal argument exception
+   * When Factor is less than zero, will throw exception
+   */
+  @Test(expected = IllegalArgumentException.class)
+  public void testResizesIllegalFactor() {
+    Shape resizedCircle1, resizedRect1, resizedTri1;
+
+    resizedCircle1 = circle1.resize(-2.5); //negative factor
+
+    resizedRect1 = rect1.resize(-12.5);
+
+    resizedTri1 = tri1.resize(-0.5);
+
 
   }
 
@@ -192,4 +214,34 @@ public class ShapeTest {
     // compare two arrays
     assertArrayEquals(shapeLisSorted.toArray(), shapeLisSortByComparator.toArray());
   }
+
+  /**
+   * Tests Point2D class constructor by get x and get y method
+   */
+  @Test
+  public void testPoint2D() {
+    Point2D p1 = new Point2D(1,2);
+    Point2D p2 = new Point2D(0, 0);
+
+    assertEquals(1, p1.getX(),0.01);
+    assertEquals(0, p2.getX(),0.01);
+    assertEquals(2, p1.getY(),0.01);
+    assertEquals(0, p2.getY(),0.01);
+
+  }
+
+  /**
+   * Tests Point2D class
+   * test distToOrigin method
+   * return the distance of two points
+   */
+  @Test
+  public void testPoint2DDistToOrigin() {
+    Point2D p1 = new Point2D(1,2);
+    Point2D p2 = new Point2D(0, 0);
+
+    assertEquals(2.236, p1.distToOrigin(),0.01);
+    assertEquals(0, p2.distToOrigin(),0.01);
+  }
+
 }

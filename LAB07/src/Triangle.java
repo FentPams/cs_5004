@@ -39,7 +39,6 @@ public class Triangle extends AbstractShape {
     this(new Point2D(x1, y1), new Point2D(x2, y2), new Point2D(x3, y3));
   }
 
-
   /**
    * Computes and returns the area of this shape. Area of triangle =  (Ax(By -Cy) + Bx(Cy -Ay) +
    * Cx(Ay - By))/2 Read more:
@@ -73,7 +72,8 @@ public class Triangle extends AbstractShape {
    * @return the resized Shape
    */
   @Override
-  public Shape resize(double factor) {
+  public Shape resize(double factor)throws IllegalArgumentException {
+    if(factor < 0) throw new IllegalArgumentException("Illegal factor");
     double lambda = sqrt(factor);
     double x1 = this.reference.getX();
     double y1 = this.reference.getY();
