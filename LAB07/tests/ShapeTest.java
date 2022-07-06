@@ -216,20 +216,27 @@ public class ShapeTest {
   }
 
   /**
-   * Tests Point2D class constructor by get x and get y method
+   * Tests Point2D get x  method
    */
   @Test
-  public void testPoint2D() {
+  public void testPoint2DGetX() {
     Point2D p1 = new Point2D(1,2);
     Point2D p2 = new Point2D(0, 0);
 
     assertEquals(1, p1.getX(),0.01);
     assertEquals(0, p2.getX(),0.01);
+  }
+  /**
+   * Tests Point2D get y  method
+   */
+  @Test
+  public void testPoint2DGetY() {
+    Point2D p1 = new Point2D(1,2);
+    Point2D p2 = new Point2D(0, 0);
+
     assertEquals(2, p1.getY(),0.01);
     assertEquals(0, p2.getY(),0.01);
-
   }
-
   /**
    * Tests Point2D class
    * test distToOrigin method
