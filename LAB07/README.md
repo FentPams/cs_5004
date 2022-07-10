@@ -16,6 +16,14 @@ System.out.println("Thank you for reviewing my repo!")
  
  
  ### LAB07: Geneircs and Ordering: 💯
+   #### Questions and answers:
+   - How many files need to be edited to make this based on perimeter instead? 
+     - 1
+   - What key principle of OOD does this illustrate? 
+     - Abstraction
+   - (Without that principle, how many files might have required modification?) 
+     - 3
+   
  
    #### src folder
    - Revised 
