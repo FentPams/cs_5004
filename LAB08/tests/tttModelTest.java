@@ -65,7 +65,24 @@ public class tttModelTest {
   }
 
   /**
-   * Test nextPlayer method Next player is X
+   * Tests isXsTurn method, return boolean
+   */
+  @Test
+  public void testIsXsTurn(){
+    assertTrue(tester.isXsTurn()); // X goes first
+  }
+
+  /**
+   * Tests isOsTurn method, return boolean
+   */
+  @Test
+  public void testIsOsTurn(){
+    tester.move(0,0); //X goes first
+    assertTrue(tester.isOsTurn()); // O's Turn
+  }
+
+  /**
+   * Tests nextPlayer method Next player is X
    */
   @Test
   public void testNextPlayerX() {

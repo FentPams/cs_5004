@@ -16,12 +16,30 @@ public interface tttModel {
      // In order to allow the client to find out whose turn it is, we
      // also have several choices. One simple way is a boolean method
      // or methods to ask if it is a particular player’s turn:
+     */
+
+    /**
+     * Check if is one player's turn
+     * @return boolean if is X's turn
+     */
+    boolean isXsTurn();
+
+    /**
+     * Check if is one player's turn
+     * @return boolean if is O's turn
+     */
+    boolean isOsTurn();
 
      // Even within the above approach, we have a design choice: What
      // should the methods do if called once the game is over? They
      // could return false, or they could throw an exception; either
      // way, we ought to document this choice. Which do you prefer, and
      // why?
+
+    // Answer: return false is better, because we can expect that this case happens very commonly.
+    //       Some other handlings like try-catch could be written.
+    //       And IllegalStateException is an unchecked Exception, which occurs at the runtime,
+    //       it can lower the program efficiency.
 
      // Another way would be to have the method return some
      // representation of the player whose turn it is, like so:
