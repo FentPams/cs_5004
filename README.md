@@ -22,6 +22,7 @@
 | :white_check_mark:| [LAB05](#lab05)         |                      |   June 7th       |Recursive Data Structure                     |
 | :white_check_mark:| [LAB07](#lab07)         |  [HWK02](#hwk02)     |   June 20th      |Equality and Comparison                      |
 | :white_check_mark:| [MIDTERM5004](#midterm5004) |                  | July 7th         | Midterm                                     |
+| :white_check_mark:| [LAB08](#lab08)         |                      |    July 12th     |  Design of Model                                           |
 
 ## LAB01: 
  #### 1. HelloWorld- A HelloWorld Class
@@ -102,4 +103,10 @@
       - [An ItemTest](https://github.com/FentPams/cs_5004/blob/main/MIDTERM5004/tests/ItemTest.java)
    - UML graph
  
-
+## LAB08:
+#### Tic Tac Toe:
+   - src folder 
+     - [tttModel Interface](https://github.com/FentPams/cs_5004/blob/main/LAB08/src/Player.java)
+     - [Player enum class](https://github.com/FentPams/cs_5004/blob/main/LAB08/src/tttModel.java)
+   - tests folder
+     - [tttModelTest](https://github.com/FentPams/cs_5004/tree/main/LAB08/tests)
