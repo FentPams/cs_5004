@@ -21,6 +21,7 @@
 | :white_check_mark:| [LAB04](#lab04)         |  [HWK01](#hwk01)     |   May 31th       |Representing More Complex From of Data       |
 | :white_check_mark:| [LAB05](#lab05)         |                      |   June 7th       |Recursive Data Structure                     |
 | :white_check_mark:| [LAB07](#lab07)         |  [HWK02](#hwk02)     |   June 20th      |Equality and Comparison                      |
+| :white_check_mark:| [MIDTERM5004](#midterm5004) |                  | July 7th         | Midterm                                     |
 
 ## LAB01: 
  #### 1. HelloWorld- A HelloWorld Class
@@ -84,4 +85,21 @@
       - [DisComparator Class](https://github.com/FentPams/cs_5004/blob/main/LAB07/src/DistComparator.java)
    - test folder
       - [ShapeTest Class](https://github.com/FentPams/cs_5004/blob/main/LAB07/tests/ShapeTest.java)
-   - javadocs folder    
+   - javadocs folder
+ ## MIDTERM5004
+#### SHOPPINGLIST:
+   - src folder 
+      - [An IShoppingList interface](https://github.com/FentPams/cs_5004/blob/main/MIDTERM5004/src/IShoppingList.java)
+      - [A Enum Category Class](https://github.com/FentPams/cs_5004/blob/main/MIDTERM5004/src/Category.java)
+      - [A Clothing Class](https://github.com/FentPams/cs_5004/blob/main/MIDTERM5004/src/Clothing.java)
+      - [A Food Class](https://github.com/FentPams/cs_5004/blob/main/MIDTERM5004/src/Food.java)
+      - [An Other Class](https://github.com/FentPams/cs_5004/blob/main/MIDTERM5004/src/Other.java)
+      - [An abstract Item Class](https://github.com/FentPams/cs_5004/blob/main/MIDTERM5004/src/Item.java)
+      - [A Comparator Class](https://github.com/FentPams/cs_5004/blob/main/MIDTERM5004/src/ItemImportanceComparator.java)
+      - [A ShoppingList Class](https://github.com/FentPams/cs_5004/blob/main/MIDTERM5004/src/ShoppingList.java)
+   - test folder 
+      - [A ShoppingList Test](https://github.com/FentPams/cs_5004/blob/main/MIDTERM5004/tests/ShoppingListTest.java)
+      - [An ItemTest](https://github.com/FentPams/cs_5004/blob/main/MIDTERM5004/tests/ItemTest.java)
+   - UML graph
+ 
+
