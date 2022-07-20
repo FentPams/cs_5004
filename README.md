@@ -22,8 +22,9 @@
 | :white_check_mark:| [LAB05](#lab05)         |                      |   June 7th       |Recursive Data Structure                     |
 | :white_check_mark:| [LAB07](#lab07)         |  [HWK02](#hwk02)     |   June 20th      |Equality and Comparison                      |
 | :white_check_mark:| [MIDTERM5004](#midterm5004) |                  | July 7th         | Midterm                                     |
-| :white_check_mark:| [LAB08](#lab08)         |                      |    July 12th     |  Design of Model                                           |
-
+| :white_check_mark:| [LAB08](#lab08)         |                      |    July 12th     |  Design of Model                            |
+| :white_check_mark:|                         |    [HWK03](#hwk03)   |    July 19th     |  Controller and its Use                     |
+ 
 ## LAB01: 
  #### 1. HelloWorld- A HelloWorld Class
  #### 2. PersonProject 
@@ -110,3 +111,12 @@
      - [Player enum class](https://github.com/FentPams/cs_5004/blob/main/LAB08/src/tttModel.java)
    - tests folder
      - [tttModelTest](https://github.com/FentPams/cs_5004/tree/main/LAB08/tests)
+## HWK03:
+#### Tic Tac Toe:
+   - src folder 
+     - [tttModelImpl class](https://github.com/FentPams/cs_5004/blob/main/HWK03/src/tttModelImpl.java)
+     - [tttModel Interface](https://github.com/FentPams/cs_5004/blob/main/HWK03/src/tttModel.java)
+     - [Player enum class](https://github.com/FentPams/cs_5004/blob/main/HWK03/src/Player.java)
+     
+   - tests folder
+     - [tttModelTest](https://github.com/FentPams/cs_5004/blob/main/HWK03/tests/tttModelTest.java)
