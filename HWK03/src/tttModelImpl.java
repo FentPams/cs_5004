@@ -12,8 +12,8 @@ public class tttModelImpl implements tttModel {
       for (int j = 0; j < 3; j++) {
         this.board[i][j] = ' ';
       }
-      this.turns = 0;
     }
+    this.turns = 0;
   }
 
 
@@ -32,18 +32,14 @@ public class tttModelImpl implements tttModel {
   public void move(int column, int row) {
     if (isGameOver()) {
       throw new IllegalStateException("Game is over!");
-    } else if (column > 2 || row > 2) {
+    } else if (column > 2 || row > 2 || column < 0 || row < 0) {
       throw new IndexOutOfBoundsException("Invalid cell input!");
     } else {
       if (board[column][row] != ' ') {
         throw new IllegalStateException("Occupied!");
-      } else if (isXsTurn()) {
-        board[column][row] = 'X';
-        turns++;
-      } else {
-        board[column][row] = 'O';
-        turns++;
       }
+      board[column][row] = isXsTurn() ? 'X' : 'O';
+      turns++;
     }
   }
 
@@ -55,7 +51,7 @@ public class tttModelImpl implements tttModel {
   @Override
   public boolean isXsTurn() {
     // X goes first, X takes turns at 0, 2, 4, 6, 8
-    return this.turns < 9 && this.turns % 2 == 0;
+    return this.turns % 2 == 0;
   }
 
   /**
@@ -65,8 +61,8 @@ public class tttModelImpl implements tttModel {
    */
   @Override
   public boolean isOsTurn() {
-    // O goes after, O takes turns at 1, 3, 5, 7, 9
-    return this.turns <= 9 && this.turns % 2 == 1;
+    // O goes after, O takes turns at 1, 3, 5, 7
+    return this.turns % 2 == 1;
   }
 
   /**
@@ -80,11 +76,8 @@ public class tttModelImpl implements tttModel {
     if (isGameOver()) {
       throw new IllegalStateException("Game is over!");
     }
-    // turns is 0,2,4,6,8 X is next player, 1, 3, 5, 7, 9 turns O is next player
-    if (this.turns % 2 == 0) {
-      return Player.X;
-    }
-    return Player.O;
+    // turns is 0,2,4,6,8 X is next player, 1, 3, 5, 7  turns O is next player
+    return this.turns % 2 == 0 ? Player.X : Player.O;
   }
 
   /**
@@ -98,15 +91,16 @@ public class tttModelImpl implements tttModel {
    */
   @Override
   public Player getMarkAt(int column, int row) {
-    if (column > 2 || row > 2) {
+    if (column > 2 || row > 2 || column < 0 || row < 0) {
       throw new IndexOutOfBoundsException("Invalid cell input!");
     } else {
-      if (board[column][row] == ' ') {
-        return null;
-      } else if (board[column][row] == 'X') {
+      if (board[column][row] == 'X') {
         return Player.X;
+      } else if (board[column][row] == 'O') {
+        return Player.O;
+      } else {
+        return null;
       }
-      return Player.O;
     }
   }
 
@@ -122,13 +116,13 @@ public class tttModelImpl implements tttModel {
       return true;
     }
     for (int i = 0; i < 3; i++) {
-      // Checks rows
+      // Checks columns
       if ((board[i][0] == board[i][1] && board[i][0] == board[i][2] && board[i][0] == 'X') || (
           board[i][0] == board[i][1] && board[i][0] == board[i][2] && board[i][0] == 'O')) {
         return true;
       }
       // Checks rows
-      else if ((board[0][i] == board[1][i] && board[0][i] == board[2][i] && board[0][i] == 'X') || (
+      if ((board[0][i] == board[1][i] && board[0][i] == board[2][i] && board[0][i] == 'X') || (
           board[0][i] == board[1][i] && board[0][i] == board[2][i] && board[0][i] == 'O')) {
         return true;
       }
@@ -137,12 +131,10 @@ public class tttModelImpl implements tttModel {
     if ((board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] == 'X') || (
         board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] == 'O')) {
       return true;
-    } else if ((board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] == 'X') || (
-        board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] == 'O')) {
-      return true;
+    } else {
+      return (board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] == 'X') || (
+          board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] == 'O');
     }
-
-    return false;
   }
 
   /**
@@ -156,7 +148,7 @@ public class tttModelImpl implements tttModel {
     if (!isGameOver()) {
       throw new IllegalStateException("No winner yet!");
     }
-    for (int i = 0; i <= 2; i++) {
+    for (int i = 0; i < 3; i++) {
       // Checks columns
       if (board[i][0] == board[i][1] && board[i][0] == board[i][2] && board[i][0] == 'X') {
         return Player.X;
@@ -165,25 +157,26 @@ public class tttModelImpl implements tttModel {
       }
 
       // Checks rows
-      else if (board[0][i] == board[1][i] && board[0][i] == board[2][i] && board[0][i] == 'X') {
+      if (board[0][i] == board[1][i] && board[0][i] == board[2][i] && board[0][i] == 'X') {
         return Player.X;
       } else if (board[0][i] == board[1][i] && board[0][i] == board[2][i] && board[0][i] == 'O') {
         return Player.O;
       }
-
-      // Checks diagonals
-      if (board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] == 'X') {
-        return Player.X;
-      } else if (board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] == 'O') {
-        return Player.O;
-      }
-
-      if (board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] == 'X') {
-        return Player.X;
-      } else if (board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] == 'O') {
-        return Player.O;
-      }
     }
+
+    // Checks diagonals
+    if (board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] == 'X') {
+      return Player.X;
+    } else if (board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] == 'O') {
+      return Player.O;
+    }
+
+    if (board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] == 'X') {
+      return Player.X;
+    } else if (board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] == 'O') {
+      return Player.O;
+    }
+
     // Tie
     return null;
   }
