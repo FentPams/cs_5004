@@ -30,21 +30,21 @@ public interface tttModel {
      */
     boolean isOsTurn();
 
-     // Even within the above approach, we have a design choice: What
-     // should the methods do if called once the game is over? They
-     // could return false, or they could throw an exception; either
-     // way, we ought to document this choice. Which do you prefer, and
-     // why?
+    // Even within the above approach, we have a design choice: What
+    // should the methods do if called once the game is over? They
+    // could return false, or they could throw an exception; either
+    // way, we ought to document this choice. Which do you prefer, and
+    // why?
 
     // Answer: return false is better, because we can expect that this case happens very commonly.
     //       Some other handlings like try-catch could be written.
     //       And IllegalStateException is an unchecked Exception, which occurs at the runtime,
     //       it can lower the program efficiency.
 
-     // Another way would be to have the method return some
-     // representation of the player whose turn it is, like so:
+    // Another way would be to have the method return some
+    // representation of the player whose turn it is, like so:
 
-     /**
+    /**
      * Returns the player whose turn is next.
      *
      * @return the next player
