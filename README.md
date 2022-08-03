@@ -24,6 +24,7 @@
 | :white_check_mark:| [MIDTERM5004](#midterm5004) |                  | July 7th         | Midterm                                     |
 | :white_check_mark:| [LAB08](#lab08)         |                      |    July 12th     |  Design of Model                            |
 | :white_check_mark:|                         |    [HWK03](#hwk03)   |    July 19th     |  Controller and its Use                     |
+| :white_check_mark:| [LAB10](#lab10)         |                      |    Aug 2nd       |  Inheritence and Composition              |
  
 ## LAB01: 
  #### 1. HelloWorld- A HelloWorld Class
@@ -120,3 +121,21 @@
      
    - tests folder
      - [tttModelTest](https://github.com/FentPams/cs_5004/blob/main/HWK03/tests/tttModelTest.java)
+## LAB10:
+### Intset Debug
+   - src folder directory:
+     - [Interface:InstrumentedIntSet](https://github.com/FentPams/cs_5004/blob/main/LAB10/src/InstrumentedIntSet.java)
+     - [InstrumentedIntSet1](https://github.com/FentPams/cs_5004/blob/main/LAB10/src/InstrumentedIntSet1.java)
+     - [InstrumentedIntSet2A](https://github.com/FentPams/cs_5004/blob/main/LAB10/src/InstrumentedIntSet2A.java)
+     - [InstrumentedIntSet2](https://github.com/FentPams/cs_5004/blob/main/LAB10/src/InstrumentedIntSet2A.java)
+     - [InstrumentedIntSet3](https://github.com/FentPams/cs_5004/blob/main/LAB10/src/InstrumentedIntSet3.java)
+     - [InstrumentedIntSet3A](https://github.com/FentPams/cs_5004/blob/main/LAB10/src/InstrumentedIntSet3A.java)
+     - [InstrumentedIntSet4](https://github.com/FentPams/cs_5004/blob/main/LAB10/src/InstrumentedIntSet4.java)
+        
+   - tests folder
+     - [InstrumentedIntSet1Test](https://github.com/FentPams/cs_5004/blob/main/LAB10/tests/InstrumentedIntSet1Test.java)
+     - [InstrumentedIntSet2ATest](https://github.com/FentPams/cs_5004/blob/main/LAB10/tests/InstrumentedIntSet2ATest.java)
+     - [InstrumentedIntSet2Test](https://github.com/FentPams/cs_5004/blob/main/LAB10/tests/InstrumentedIntSet2Test.java)
+     - [InstrumentedIntSet3Test](https://github.com/FentPams/cs_5004/blob/main/LAB10/tests/InstrumentedIntSet3Test.java)
+     - [InstrumentedIntSet3ATest](https://github.com/FentPams/cs_5004/blob/main/LAB10/tests/InstrumentedIntSet3ATest.java)
+     - [InstrumentedIntSet4Test](https://github.com/FentPams/cs_5004/blob/main/LAB10/tests/InstrumentedIntSet4Test.java)
