@@ -4,6 +4,8 @@
  * and test if IntSet3 works fine,
  * it uses Private_add method
  * Still works!
+ *
+ * Can't test InstrumentedIntSet3 extend IntSet4, will have compile err
  */
 
 import org.junit.Test;

@@ -3,6 +3,8 @@
  * which is the second version based on the InstrumentedIntSet2,
  * and retest if it works finely for IntSet2
  * All passed!
+ *
+ * Can't test InstrumentedIntSet3 extend IntSet4, will have compile err
  */
 import org.junit.Test;
 

@@ -1,5 +1,6 @@
 /**
  * # 4, This class extends IntSet2, bug free
+ * This class can't extend IntSet4, will have compile err
  */
 
 /**
