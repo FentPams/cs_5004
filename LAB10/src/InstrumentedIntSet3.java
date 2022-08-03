@@ -1,3 +1,6 @@
+/**
+ * # 4, This class extends IntSet2, bug free
+ */
 
 /**
  * An integer set that is instrumented to count the number of times an

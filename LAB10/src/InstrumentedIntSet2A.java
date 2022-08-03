@@ -1,6 +1,6 @@
 /**
  *  #2
- * This is InstrumentedSet2 extends IntSet2
+ * This is InstrumentedSet2A extends IntSet2
  * because InstrumentedIntSet1 has bug, now this version fixed that
  * Bugs free
  */

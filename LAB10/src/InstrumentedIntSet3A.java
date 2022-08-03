@@ -1,3 +1,6 @@
+/**
+ * #5, This class extends IntSet3, still works
+ */
 
 /**
  * An integer set that is instrumented to count the number of times an
