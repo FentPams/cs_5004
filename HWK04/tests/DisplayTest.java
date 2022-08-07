@@ -13,7 +13,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class DisplayTest {
-    TTTGame controllerTester; //controller
     Board modelTester;  // model
     Display viewTester; // view
 
@@ -22,7 +21,6 @@ public class DisplayTest {
     public void setUp() throws Exception {
         modelTester = new Board();
         viewTester = new Display(modelTester);
-        controllerTester = new TTTGame(modelTester,viewTester);
     }
 
     /**
@@ -30,7 +28,7 @@ public class DisplayTest {
      */
     @Test
     public void testDisplayBoardWithXOneMove() {
-        controllerTester.play(0,0);
+        modelTester.move(0,0);
         assertEquals("X _ _ \n" +
                 "_ _ _ \n" +
                 "_ _ _ \n", viewTester.displayBoard());
@@ -41,8 +39,8 @@ public class DisplayTest {
      */
     @Test
     public void testDisplayBoardWithOOneMove() {
-        controllerTester.play(0,0);
-        controllerTester.play(0,1);
+        modelTester.move(0,0);
+        modelTester.move(0,1);
         assertEquals("X O _ \n" +
                 "_ _ _ \n" +
                 "_ _ _ \n", viewTester.displayBoard());
@@ -53,12 +51,12 @@ public class DisplayTest {
      */
     @Test
     public void testDisplayBoardWithMultipleMoves() {
-        controllerTester.play(0,0);
-        controllerTester.play(0,1);
-        controllerTester.play(0,2);
-        controllerTester.play(1,1);
-        controllerTester.play(2,1);
-        controllerTester.play(2,2);
+        modelTester.move(0,0);
+        modelTester.move(0,1);
+        modelTester.move(0,2);
+        modelTester.move(1,1);
+        modelTester.move(2,1);
+        modelTester.move(2,2);
         assertEquals("X O X \n" +
                 "_ O _ \n" +
                 "_ X O \n", viewTester.displayBoard());
@@ -69,15 +67,15 @@ public class DisplayTest {
      */
     @Test
     public void testDisplayBoardWhenXWins() {
-        controllerTester.play(0,0);
-        controllerTester.play(1,1);
-        controllerTester.play(0,1);
-        controllerTester.play(1,2);
-        controllerTester.play(0,2);
+        modelTester.move(0,0);
+        modelTester.move(1,1);
+        modelTester.move(0,1);
+        modelTester.move(1,2);
+        modelTester.move(0,2);
         assertEquals("X X X \n" +
                 "_ O O \n" +
                 "_ _ _ \n" +
-                "X wins!", viewTester.displayBoard());
+                "Player X wins!", viewTester.displayBoard());
     }
 
     /**
@@ -85,16 +83,16 @@ public class DisplayTest {
      */
     @Test
     public void testDisplayBoardWhenOWins() {
-        controllerTester.play(0,0);
-        controllerTester.play(1,1);
-        controllerTester.play(0,1);
-        controllerTester.play(1,2);
-        controllerTester.play(2,1);
-        controllerTester.play(1,0);
+        modelTester.move(0,0);
+        modelTester.move(1,1);
+        modelTester.move(0,1);
+        modelTester.move(1,2);
+        modelTester.move(2,1);
+        modelTester.move(1,0);
         assertEquals("X X _ \n" +
                 "O O O \n" +
                 "_ X _ \n" +
-                "O wins!", viewTester.displayBoard());
+                "Player O wins!", viewTester.displayBoard());
     }
 
     /**
@@ -102,15 +100,15 @@ public class DisplayTest {
      */
     @Test
     public void testDisplayBoardWhenTies() {
-        controllerTester.play(0, 0); // Player X
-        controllerTester.play(1, 0); // Player O
-        controllerTester.play(0, 1); // Player X
-        controllerTester.play(1, 1); // Player O
-        controllerTester.play(1, 2); // Player X
-        controllerTester.play(0, 2); // Player O
-        controllerTester.play(2, 2); // Player X
-        controllerTester.play(2, 1); // Player O
-        controllerTester.play(2, 0); // Player X
+        modelTester.move(0, 0); // Player X
+        modelTester.move(1, 0); // Player O
+        modelTester.move(0, 1); // Player X
+        modelTester.move(1, 1); // Player O
+        modelTester.move(1, 2); // Player X
+        modelTester.move(0, 2); // Player O
+        modelTester.move(2, 2); // Player X
+        modelTester.move(2, 1); // Player O
+        modelTester.move(2, 0); // Player X
         assertEquals("X X O \n" +
                 "O O X \n" +
                 "X O X \n" +
@@ -122,8 +120,12 @@ public class DisplayTest {
      */
     @Test
     public void testDisplayBoardWhenOccupied() {
-        controllerTester.play(0, 0); // Player X
-        controllerTester.play(0, 0); // Player O
+        try {
+            modelTester.move(0, 0); // Player X
+            modelTester.move(0, 0); // Player O
+        } catch(Exception e) {
+            // do nothing
+        }
 
         assertEquals(
                 "X _ _ \n" +

@@ -44,8 +44,8 @@ public class BoardTest {
 
     @Test
     public void testWhoseTurnX2() {
-        controllerTester.play(0,0);
-        controllerTester.play(1,1);
+        modelTester.move(0,0);
+        modelTester.move(1,1);
         assertEquals(Player.X, modelTester.whoseTurn());
     }
 
@@ -57,7 +57,7 @@ public class BoardTest {
 
     @Test
     public void testWhoseTurnY() {
-        controllerTester.play(0,0);
+        modelTester.move(0,0);
         assertEquals(Player.O, modelTester.whoseTurn());
     }
 
@@ -69,9 +69,9 @@ public class BoardTest {
 
     @Test
     public void testWhoseTurnY2() {
-        controllerTester.play(0,0);
-        controllerTester.play(1,1);
-        controllerTester.play(1,2);
+        modelTester.move(0,0);
+        modelTester.move(1,1);
+        modelTester.move(1,2);
         assertEquals(Player.O, modelTester.whoseTurn());
     }
 
@@ -80,10 +80,10 @@ public class BoardTest {
      */
     @Test
     public void testGetMarkAt() {
-        controllerTester.play(0, 0); // X move
+        modelTester.move(0, 0); // X move
         assertEquals(Player.X, modelTester.getMarkAt(0, 0));
 
-        controllerTester.play(1, 1); // O move
+        modelTester.move(1, 1); // O move
         assertEquals(Player.O, modelTester.getMarkAt(1, 1));
     }
 

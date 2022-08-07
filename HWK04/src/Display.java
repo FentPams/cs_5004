@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * TTT game with MVC model
  * Display class represents View of game
@@ -33,10 +35,38 @@ public class Display {
             if (winner == null) {
                 sb.append("It is a Tie.");
             } else {
-                sb.append(winner.toString()).append(" wins!");
+                sb.append("Player ").append(winner.toString()).append(" wins!");
             }
         }
         System.out.println(sb.toString());
         return sb.toString();
+    }
+
+    public int promptPlayer() {
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            Player currentPlayer = board.whoseTurn();
+            System.out.printf("Player %s, please enter the row and column (split with a comma like 0,2) you want to move and press ENTER to end:\n", currentPlayer);
+            String input = sc.nextLine();
+            int posCode = validateNumber(input);
+            if (posCode != -1) {
+                return posCode;
+            } else {
+                System.out.println("Please re-enter!");
+            }
+        }
+    }
+
+    private int validateNumber(String input) {
+        String[] pos = input.split(",");
+        if (pos.length != 2) return -1;
+        try {
+            int row = Integer.parseInt(pos[0].trim());
+            int col = Integer.parseInt(pos[1].trim());
+            if (row < 0 || row > 2 || col < 0 || col > 2) return -1;
+            return row * 10 + col;
+        } catch(Exception e) {
+            return -1;
+        }
     }
 }

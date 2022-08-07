@@ -15,16 +15,19 @@ public class TTTGame {
         this.display = display;
     }
 
-    // Play the game! if valid play return true, otherwise false
-    public boolean play(int row, int column) {
-        try {
-            board.move(row, column);
-            display.displayBoard();
-
-        } catch (Exception e) {
-            System.out.println("Something wrong: " + e.getMessage());
-            return false;
+    public void playGame() {
+        System.out.println("Game Start!");
+        display.displayBoard();
+        while (!board.isGameOver()) {
+            int posCode = display.promptPlayer();
+            int row = posCode / 10, col = posCode % 10;
+            try {
+                board.move(row, col);
+                display.displayBoard();
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
-        return true;
+        System.out.println("Game Over!");
     }
 }
