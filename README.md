@@ -24,7 +24,7 @@
 | :white_check_mark:| [MIDTERM5004](#midterm5004) |                  | July 7th         | Midterm                                     |
 | :white_check_mark:| [LAB08](#lab08)         |                      |    July 12th     |  Design of Model                            |
 | :white_check_mark:|                         |    [HWK03](#hwk03)   |    July 19th     |  Controller and its Use                     |
-| :white_check_mark:| [LAB10](#lab10)         |                      |    Aug 2nd       |  Inheritence and Composition              |
+| :white_check_mark:| [LAB10](#lab10)         |    [HWK04](#hwk04)   |    Aug 2nd       |  Inheritence and Composition                |
  
 ## LAB01: 
  #### 1. HelloWorld- A HelloWorld Class
@@ -139,3 +139,15 @@
      - [InstrumentedIntSet3Test](https://github.com/FentPams/cs_5004/blob/main/LAB10/tests/InstrumentedIntSet3Test.java)
      - [InstrumentedIntSet3ATest](https://github.com/FentPams/cs_5004/blob/main/LAB10/tests/InstrumentedIntSet3ATest.java)
      - [InstrumentedIntSet4Test](https://github.com/FentPams/cs_5004/blob/main/LAB10/tests/InstrumentedIntSet4Test.java)
+  ## HWK04:
+#### Tic Tac Toe MVC:
+   - src folder 
+     - [Board class](https://github.com/FentPams/cs_5004/blob/main/HWK04/src/Board.java)
+     - [Display class](https://github.com/FentPams/cs_5004/blob/main/HWK04/src/Display.java)
+     - [TTTGame class](https://github.com/FentPams/cs_5004/blob/main/HWK04/src/TTTGame.java)
+     - [Player enum class](https://github.com/FentPams/cs_5004/blob/main/HWK04/src/Player.java)
+     
+   - tests folder
+     - [BoardTest](https://github.com/FentPams/cs_5004/blob/main/HWK04/tests/BoardTest.java)
+     - [DisplayTest](https://github.com/FentPams/cs_5004/blob/main/HWK04/tests/DisplayTest.java)
+     - [TTTGameTest](https://github.com/FentPams/cs_5004/blob/main/HWK04/tests/TTTGameTest.java)
