@@ -19,29 +19,19 @@ public class Display {
      * And _ for empty spot.
      * If game is over, will print fourth line with remainder info.
      *
-     * @return Sting, represents the board status
+     * @return Sting, represents the board status. This return type is not necessary but just for unit tests.
      */
     public String displayBoard() {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                Player curr = board.getMarkAt(i, j);
-                sb.append(curr == null ? "_" : curr.toString()).append("\s");
-            }
-            sb.append("\n");
-        }
-        if (board.isGameOver()) {
-            Player winner = board.getWinner();
-            if (winner == null) {
-                sb.append("It is a Tie.");
-            } else {
-                sb.append("Player ").append(winner.toString()).append(" wins!");
-            }
-        }
-        System.out.println(sb.toString());
-        return sb.toString();
+        String boardStr = board.toString();
+        System.out.println(boardStr);
+        return boardStr;
     }
 
+    /**
+     * Prompt player to enter the position he/she wants to play and re-enter information
+     *
+     * @return int
+     */
     public int promptPlayer() {
         Scanner sc = new Scanner(System.in);
         while (true) {
@@ -57,6 +47,12 @@ public class Display {
         }
     }
 
+    /**
+     * Private method to validate the user' input in a right format, and called by prompt player.
+     *
+     * @param input user input to tell which position they want to move
+     * @return an integer (e.g. for row 1, column 2, return 1 * 10 + 2 = 12)
+     */
     private int validateNumber(String input) {
         String[] pos = input.split(",");
         if (pos.length != 2) return -1;
@@ -65,8 +61,23 @@ public class Display {
             int col = Integer.parseInt(pos[1].trim());
             if (row < 0 || row > 2 || col < 0 || col > 2) return -1;
             return row * 10 + col;
-        } catch(Exception e) {
+        } catch (Exception e) {
             return -1;
         }
     }
+
+    /**
+     * Displays a welcome message to the console.  Used when the game begins.
+     */
+    public void printWelcomeMessage() {
+        System.out.println("Welcome to Tic Tac Toe!\n");
+    }
+
+    /**
+     * Displays an ending message to the console.  Used when the game ends.
+     */
+    public void printEndMessage() {
+        System.out.println("Game Over!\n");
+    }
+
 }

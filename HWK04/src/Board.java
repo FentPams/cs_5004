@@ -1,7 +1,7 @@
 /**
  * TTT game with MVC model
  * Board class represents Model of game
- *
+ * <p>
  * Xinyi Feng
  * Aug 2nd 2022
  */
@@ -20,6 +20,7 @@ public class Board {
     /**
      * Check if is one player's turn
      * When count is 0, 2, 4, 6, 8 is X's turn , otherwise, is 0's turn
+     *
      * @return enum X or O
      */
     public Player whoseTurn() {
@@ -143,6 +144,29 @@ public class Board {
 
         // Tie
         return null;
+    }
+
+    /**
+     * @return Sting to represent current board
+     */
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                Player curr = board[i][j];
+                sb.append(curr == null ? "_" : curr.toString()).append("\s");
+            }
+            sb.append("\n");
+        }
+        if (this.isGameOver()) {
+            Player winner = this.getWinner();
+            if (winner == null) {
+                sb.append("It is a Tie.");
+            } else {
+                sb.append("Player ").append(winner.toString()).append(" wins!");
+            }
+        }
+        return sb.toString();
     }
 
 }

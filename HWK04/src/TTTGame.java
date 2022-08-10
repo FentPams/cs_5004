@@ -15,8 +15,9 @@ public class TTTGame {
         this.display = display;
     }
 
+    // Method to play the game until someone has won
     public void playGame() {
-        System.out.println("Game Start!");
+        display.printWelcomeMessage();
         display.displayBoard();
         while (!board.isGameOver()) {
             int posCode = display.promptPlayer();
@@ -28,6 +29,6 @@ public class TTTGame {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println("Game Over!");
+        display.printEndMessage();
     }
 }
